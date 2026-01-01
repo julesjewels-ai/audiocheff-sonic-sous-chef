@@ -23,6 +23,7 @@ class AudioCheffApp:
             "boiling": "Water is boiling. Ready for pasta.",
             "searing": "High heat detected. Searing process started.",
             "chopping": "Rhythmic chopping detected. Mise en place in progress.",
+            "whisking": "Whisking detected. Emulsification in progress.",
             "timer_alarm": "Timer finished!"
         }
 
