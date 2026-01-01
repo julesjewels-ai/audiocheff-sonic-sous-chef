@@ -33,3 +33,10 @@ def test_unknown_audio_ignored(app):
     assert "[NO MATCH]" in response
     assert "dog_barking" not in app.detected_events
     assert app.current_recipe_step == initial_step
+
+def test_whisking_recognition(app):
+    """Test that the 'whisking' sound is recognized."""
+    response = app.process_audio_frame("whisking")
+    assert "[MATCH] WHISKING" in response
+    assert "whisking" in app.detected_events
+    assert app.current_recipe_step == 1
